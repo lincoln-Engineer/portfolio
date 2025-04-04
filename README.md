@@ -11,7 +11,7 @@ HTML5 - Structuring the content
 
 CSS3 - Styling with responsive design using media queries
 
-JavaScript - Adding interactivity and animations
+JavaScript - Adding interactivity and animations. it is innthe html file
 
 📂 Sections
 
