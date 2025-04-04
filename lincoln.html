@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Dark mode styles */
+        
+        .dark-mode {
+            --bg-color: #121212;
+            --text-color: #f5f5f5;
+            --card-bg: #1e1e1e;
+            --shadow-color: rgba(0, 0, 0, 0.3);
+            --accent-color: #4a8eff;
+        }
+        
+        .dark-mode body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        
+        .dark-mode .skill-card,
+        .dark-mode .contact-card,
+        .dark-mode .contact-form {
+            background-color: var(--card-bg);
+            box-shadow: 0 5px 15px var(--shadow-color);
+        }
+        
+        .dark-mode .about-section {
+            background-color: #000000;
+        }
+        
+        .dark-mode .section-title,
+        .dark-mode .skill-title,
+        .dark-mode .contact-method-title {
+            color: var(--text-color);
+        }
+        
+        .dark-mode .skill-description,
+        .dark-mode .about-text,
+        .dark-mode .contact-detail {
+            color: #ccc;
+        }
+        
+        .dark-mode #dark-mode-toggle {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border: 1px solid var(--text-color);
+        }
+        
+        #dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: none;
+            background-color: #2575fc;
+            color: white;
+            cursor: pointer;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        #dark-mode-toggle:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#Skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="1.jpg" alt="LINCOLN - Tech Student" class="profile-img">
+            </div>
+            <div class="about-content">
+                <h2 class="section-title">About Me</h2>
+                <p class="about-text">
+                    I'm a passionate computer science student at KIRINYAGA UNIVERSITY with a relentless drive to innovate and create in the tech world. Currently pursuing my degree in software engineering while building practical skills in web development, mobile apps, and
+                    emerging technologies, I bridge the gap between academic knowledge and real-world application.
+                </p>
+                <p class="about-text">
+                    My toolkit includes modern web technologies (HTML/CSS/JavaScript, React), programming languages (Python, Java), and database management. What excites me most isn't just what I know today, but my capacity to learn - I thrive on tackling new frameworks
+                    and concepts, constantly pushing my boundaries.
+                </p>
+                <p class="about-text">
+                    The tech industry's rapid evolution is what fuels my ambition. I'm not just preparing for a career in tech - I'm preparing to lead and innovate. Whether through university projects, hackathons, or personal coding challenges, I'm always looking for opportunities
+                    to solve problems and create impactful solutions.
+                </p>
+                <div class="about-cta">
+                    <a href="#contact" class="cta-button">Let's Build Something Amazing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="Skills" class="skills-section">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="skill-title">Web Development</h3>
+                <p class="skill-description">
+                    Proficient in building responsive websites using HTML5, CSS3, and JavaScript (ES6+). Experienced with modern frameworks like React and Vue.js for creating dynamic user interfaces. Focus on clean, maintainable code and implementing best practices for performance
+                    and accessibility.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3 class="skill-title">Backend Development</h3>
+                <p class="skill-description">
+                    Skilled in server-side programming with Node.js, Python (Django/Flask), and PHP. Experience designing RESTful APIs and working with databases (SQL and NoSQL). Knowledge of authentication, authorization, and security best practices for web applications.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3 class="skill-title">UI/UX Design</h3>
+                <p class="skill-description">
+                    Strong understanding of design principles, color theory, and typography. Experience creating wireframes and prototypes using Figma and Adobe XD. Focus on creating intuitive user experiences with a mobile-first approach.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="skill-title">Mobile Development</h3>
+                <p class="skill-description">
+                    Experience developing cross-platform mobile applications using React Native and Flutter. Understanding of native mobile development concepts and platform-specific design guidelines. Knowledge of app store submission processes and mobile performance optimization.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-subtitle">I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll get back to you!</p>
+
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="contact-method-title">Email</h3>
+                    <a href="mailto:lincolnmwangi086@gmail.com" class="contact-detail">lincolnmwangi086@gmail.com</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 class="contact-method-title">Phone</h3>
+                    <a href="tel:+254701812770" class="contact-detail">+254 701 812 770</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3 class="contact-method-title">GitHub</h3>
+                    <a href="https://github.com/lincoln-Engineer/portfolio" target="_blank" class="contact-detail">github.com/lincoln-engineer</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="contact-method-title">Location</h3>
+                    <p class="contact-detail">Kutus, Kirinyaga, Kenya</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send Me a Message</h3>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 LINCOLN. All rights reserved.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const darkModeToggle = document.createElement('button');
+            darkModeToggle.id = 'dark-mode-toggle';
+            darkModeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+            document.body.insertBefore(darkModeToggle, document.body.firstChild);
+
+            // Check for saved user preference
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.body.classList.add('dark-mode');
+                darkModeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+            }
+
+            darkModeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+
+                if (document.body.classList.contains('dark-mode')) {
+                    localStorage.setItem('darkMode', 'enabled');
+                    darkModeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+                } else {
+                    localStorage.setItem('darkMode', 'disabled');
+                    darkModeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
